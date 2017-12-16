@@ -21,8 +21,12 @@ class Resize {
 		}
 		
 		/*---processes*/{
-			barGrip.addEventListener("mousedown",	this._mouseDown	.bind(this))
-			barGrip.addEventListener("touchstart",	this._touchDown	.bind(this))
+			barGrip.addEventListener("mousedown"	, this._mouseDown	.bind(this))
+			barGrip.addEventListener("touchstart"	, this._touchDown	.bind(this))
+			barGrip.addEventListener("mouseup"	, this._mouseUp	.bind(this))
+			barGrip.addEventListener("touchend"	, this._touchUp   	.bind(this))
+			barGrip.addEventListener("mousemove"	, this._mouseMove	.bind(this))
+			barGrip.addEventListener("touchmove"	, this._touchMove	.bind(this))
 		}
 	}
 	
@@ -72,10 +76,6 @@ class Resize {
 		this.resizeStarted = true
 		this.resizeStartPos = y
 		
-		document.addEventListener("mouseup"	, this._mouseUp	.bind(this))
-		document.addEventListener("touchend"	, this._touchUp   	.bind(this))
-		document.addEventListener("mousemove"	, this._mouseMove	.bind(this))
-		document.addEventListener("touchmove"	, this._touchMove	.bind(this))
 		
 		return false
 	}
@@ -126,10 +126,11 @@ class Resize {
 		//---reset vars
 		this.resizeActive	= false
 		this.resizeStarted	= false
-		document.removeEventListener("mouseup"	, this._mouseUp	.bind(this))
-		document.removeEventListener("touchend"	, this._touchUp  	.bind(this))
-		document.removeEventListener("mousemove"	, this._mouseMove	.bind(this))
-		document.removeEventListener("touchmove"	, this._touchMove	.bind(this))
+		
+		////document.removeEventListener("mouseup"	, this._mouseUp	.bind(this))
+		////document.removeEventListener("touchend"	, this._touchUp  	.bind(this))
+		////document.removeEventListener("mousemove"	, this._mouseMove	.bind(this))
+		////document.removeEventListener("touchmove"	, this._touchMove	.bind(this))
 		//---apply prevent default
 		if (preventDefault) {
 			try {
