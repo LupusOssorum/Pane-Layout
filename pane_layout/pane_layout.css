@@ -1,0 +1,170 @@
+
+
+/*-----General*/
+
+/*.paneLayout-background-background {
+	background-color	:	#fff	;
+}
+.paneLayout-background-mid {
+	background-color	:	#888	;
+}
+.paneLayout-foreground-foreground {
+	color	:	#000	;
+}*/
+
+
+
+/*-----split*/
+
+
+/*---split*/
+.paneLayout-split {
+	width	:	100%	;
+	height	:	100%	;
+	display	:	flex	;
+	overflow	:	hidden	;
+}
+
+.paneLayout-split-top, .paneLayout-split-bottom {
+	overflow	:	hidden	;
+	position	:	relative	;
+}
+.paneLayout-split-top {
+}
+
+.paneLayout-split-bottom {
+	flex	:	1;
+}
+
+.paneLayout-split-bar {
+	background-color	:	#EEE	;
+	overflow	:	visible	;
+	position	:	relative	;
+	box-sizing	:	border-box	;
+}
+
+.paneLayout-split-barGrip {
+	position	:	absolute	;
+	z-index	:	100	;
+}
+
+
+
+
+/*---splitC*/
+.paneLayout-splitC {
+	flex-direction	:	column	;
+}
+
+.paneLayout-splitC-top {
+	height	:	 50%	;
+	max-height	:	100%	; /*100 when not auto*/
+	min-height	:	0	; /*0 when not auto*/
+				
+	display	:	flex	;
+	flex-direction	:	column	;
+}
+
+.paneLayout-splitC-bottom {
+}
+
+.paneLayout-splitC-bar {
+	height	:	6px	;
+	border-top	:	solid	;
+	border-bottom	:	solid	;
+	border-width	:	2px	;
+	border-color	:	#00a	;
+}
+
+.paneLayout-splitC-barGrip {
+	height	:	32px	;
+	width	:	100%	;
+	top	:	-14px	; /* height/2 - graphicHeight/2 */
+	left	:	0	;
+	cursor	:	ns-resize	;
+}
+
+
+
+/*---splitR*/
+.paneLayout-splitR {
+	flex-direction	:	row	;
+}
+
+.paneLayout-splitR-top {
+	width	:	 50%	;
+	max-width	:	100%	;/*100 when not auto*/
+	min-width	:	0	;/*0 when not auto*/
+				
+	display	:	flex	;
+	flex-direction	:	row	;
+}
+
+.paneLayout-splitR-bottom {
+}
+
+.paneLayout-splitR-bar {
+	width	:	6px	;
+	border-left	:	solid	;
+	border-right	:	solid	;
+	border-width	:	2px	;
+	border-color	:	#00a	;
+}
+
+.paneLayout-splitR-barGrip {
+	width	:	32px	;
+	height	:	100%	;
+	left	:	-14px	; /* height/2 - graphicHeight/2 */
+	top	:	0	;
+	cursor	:	ew-resize	;
+}
+
+
+
+
+
+
+
+/*Tabbed*/
+
+.paneLayout-tabbed {
+    display	:	flex	;
+    flex-direction	:	column	;
+    width	:	100%	;
+    height	:	100%	;
+}
+.paneLayout-tabbed-tabs {
+    display	:	flex	;
+    flex-direction	:	row	;
+}
+.paneLayout-tabbed-tab {
+	/*margin	:	0 5px	;*/
+	padding	:	0 5px	;
+}
+.paneLayout-tabbed-tabs-filler {
+	width	:	100%	;
+	border-bottom: solid #444;
+}
+.paneLayout-tabbed-tab {
+	border-top: solid;
+    border-left: solid;
+    border-right: solid;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+.paneLayout-tabbed-tab-active {
+}
+.paneLayout-tabbed-tab-inactive {
+	background-color: #888;
+	border-bottom: solid;
+	border-color: #444;
+}
+.paneLayout-tabbed-tabContent {
+    width	:	100%	;
+    height	:	100%	;
+}
+.paneLayout-tabbed-tabContent-active {
+}
+.paneLayout-tabbed-tabContent-inactive {
+    display	:	none	;
+}
