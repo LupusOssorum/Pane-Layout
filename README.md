@@ -1,0 +1,2 @@
+# Pane-Layout
+Pane Layout is a JavaScript/HTML utility to create pane base structure (like you see in Visual Studio and many Desktop applications) to your web apps.  Pane Layout is designed to be light weight and powerfull.  The Pane Layout API takes insperation from React component design.  I am developing this for my own products and have not composed any guides; if you want to use Pane Layout let me know and I can share instructions.
